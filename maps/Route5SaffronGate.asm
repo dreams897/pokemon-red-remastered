@@ -23,17 +23,18 @@ Route5SaffronGateGuardDrinkTalkScript:
 Route5SaffronGateGuardDrinkScript:
 	checkevent EVENT_GAVE_SAFFRON_GUARD_A_DRINK
 	iftrue .ScriptEnd
-	turnobject PLAYER, LEFT 
+	turnobject PLAYER, LEFT ;make player face the guard
 	callstd ThirstySaffronGuards_DrinkScript
-	applymovement PLAYER, .SaffronGoUp
+	checkevent EVENT_GAVE_SAFFRON_GUARD_A_DRINK
+	iftrue .ScriptEnd
+	applymovement PLAYER, .SaffronPushAway
 .ScriptEnd
 	end
 
-.SaffronGoUp:
+.SaffronPushAway
 	step UP
 	step_end
-
-
+	
 Route5SaffronGate_MapEvents:
 	db 0, 0 ; filler
 

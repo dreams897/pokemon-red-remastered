@@ -72,4 +72,6 @@ BTTrainerClassSprites:
 	db SPRITE_ROCKET_GIRL
 	db SPRITE_GIOVANNI
 	db SPRITE_JAMES ; team rocket, probably won't be used here
+	db SPRITE_GAMBLER
+	db SPRITE_SUPER_NERD
 	assert_table_length NUM_TRAINER_CLASSES - 5 ; exclude ENBY, AERODACTYLE_FOSSIL, KABUTOPS_FOSSIL, MOON_STONE_T, MYSTICALMAN

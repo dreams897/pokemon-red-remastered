@@ -114,20 +114,20 @@ PlayBattleMusic:
 	jr .done
 
 .othertrainer
-	ld a, [wLinkMode]
-	and a
-	jr nz, .johtotrainer
+;	ld a, [wLinkMode]
+;	and a
+;	jr nz, .johtotrainer
+;
+;	farcall RegionCheck
+;	ld a, e
+;	and a
+;	jr nz, .kantotrainer
 
-	farcall RegionCheck
-	ld a, e
-	and a
-	jr nz, .kantotrainer
+;.johtotrainer
+;	ld de, MUSIC_JOHTO_TRAINER_BATTLE
+;	jr .done
 
-.johtotrainer
-	ld de, MUSIC_JOHTO_TRAINER_BATTLE
-	jr .done
-
-.kantotrainer
+;.kantotrainer
 	ld de, MUSIC_TRAINER_BATTLE
 
 .done

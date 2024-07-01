@@ -1575,8 +1575,3 @@ _SaffronGateGuardThanksForTheDrinkText::
 	text "Hi, thanks for"
 	line "the cool drinks!"
 	done
-	
-_VermilionGymTrashText::
-	text "Nope, there's"
-	line "only trash here."
-	done

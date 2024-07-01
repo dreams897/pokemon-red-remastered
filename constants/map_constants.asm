@@ -153,7 +153,7 @@ ENDM
 	map_const MT_MOON_1F,              		       20, 18 ; Added                     
 	map_const MT_MOON_B1F,				       14, 14 ; Added
 	map_const MT_MOON_B2F,				       20, 18 ; Added
-	map_const UNDERGROUND_PATH,                             3, 14 ; 86
+	map_const UNDERGROUND_PATH,                             4, 23 ; 86
 	map_const ROCK_TUNNEL_1F,                              15, 18 ; 87
 	map_const ROCK_TUNNEL_B1F,                             15, 18 ; 88
 	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 89

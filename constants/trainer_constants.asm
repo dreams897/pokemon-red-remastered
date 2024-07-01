@@ -132,7 +132,13 @@ DEF GREEN EQU __trainer_class__
 	const GORDON2
 	const IAN2
 	const WARREN2
-
+	const EDDIE2
+	const DAVE2
+	const DILLON
+	const YASU
+	
+	
+	
 	trainerclass SCHOOLBOY ; 17
 	const JACK1
 	const KIPP
@@ -378,6 +384,8 @@ DEF GREEN EQU __trainer_class__
 	const KEN2
 	const BENNY2
 	const JAKE2
+	const KEIGO
+	const ELIJAH
 
 	trainerclass FISHER ; 25
 	const JUSTIN
@@ -467,7 +475,9 @@ DEF GREEN EQU __trainer_class__
 	const HUEY2
 	const HUEY3
 	const HUEY4
-
+	const TREVOR2
+	const EDMOND2
+	
 	trainerclass SUPER_NERD ; 29
 	const STAN
 	const ERIC
@@ -646,12 +656,16 @@ DEF GREEN EQU __trainer_class__
 	
 	trainerclass JRTRAINER_F ; added
 	const SHARON2
+	const NANCY
+	const ISABELLE
 	
 	trainerclass JRTRAINER_M ; added
 	const JERRY
 	const SEAN2
 	const ALEX2
 	const JEFFREY2
+	const RICKY2
+	const JEFF2
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1
@@ -743,6 +757,10 @@ DEF GREEN EQU __trainer_class__
 	const BLUE3_SQUIRTLE
 	const BLUE3_BULBASAUR
 	
+	const BLUE4_CHARMELEON
+	const BLUE4_WARTOTLE
+	const BLUE4_IVYSAUR
+	
 	trainerclass BLUE3 ; added
 
 	trainerclass OFFICER ; 41
@@ -765,7 +783,17 @@ DEF GREEN EQU __trainer_class__
 	trainerclass GIOVANNI ; 44
 	const GIOVANNI1
 	const GIOVANNI2
-	
+
+	trainerclass GAMBLER ;49
+	const HUGO
+	const JASPER
+	const DARIAN
+	const DIRK2
+
+	trainerclass ENGINEER
+	const BERNIE
+	const BRAXTON
+
 	trainerclass KABUTOPS_FOSSIL ; 45
 
 	trainerclass AERODACTYL_FOSSIL ; 46
@@ -777,6 +805,7 @@ DEF PURPLE EQU __trainer_class__
 
 	trainerclass MYSTICALMAN ; 48
 	const EUSINE
+
 
 DEF NUM_TRAINER_CLASSES EQU __trainer_class__ - 1
 

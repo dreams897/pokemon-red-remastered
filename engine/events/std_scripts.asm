@@ -1800,6 +1800,8 @@ ThirstySaffronGuards_DrinkScript:
 	farwritetext _SaffronGateGuardImParchedText
 	takeitem BERRY_JUICE
 .BackToMain
+	playsound SFX_GET_KEY_ITEM_1
+	waitsfx
 	waitbutton
 	setevent EVENT_GAVE_SAFFRON_GUARD_A_DRINK
 	farwritetext _SaffronGateGuardYouCanGoOnThroughText

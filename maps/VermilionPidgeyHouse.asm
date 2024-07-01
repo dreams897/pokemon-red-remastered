@@ -1,21 +1,48 @@
 	object_const_def
-	const VERMILIONPIDGEYHOUSE_GENTLEMAN
+	const VERMILIONPIDGEYHOUSE_YOUNGSTER
+	const VERMILIONPIDGEYHOUSE_PIDGEY
+	const VERMILIONPIDGEYHOUSE_LETTER
 
 VermilionPidgeyHouse_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-VermilionPidgeyHouseGentlemanScript:
-	jumptextfaceplayer VermilionPidgeyHouseGentlemanText
+VermilionPidgeyHouseYoungsterScript:
+	jumptextfaceplayer VermilionPidgeyHouseYoungsterText
+	
+VermilionPidgeyHousePaperScript:
+	jumptext VermilionPidgeyHouseLetterText	
 
-VermilionPidgeyHouseGentlemanText:
-	text "Over many years,"
-	line "DIGLETT dug a"
-	cont "large tunnel."
+VermilionPidgeyHousePidgeyScript:
+	opentext
+	writetext VermilionPidgeyHousePidgeyText
+	cry PIDGEY
+	waitbutton
+	closetext
+	end
 
-	para "That tunnel goes"
-	line "to a distant town."
+VermilionPidgeyHouseYoungsterText:
+	text "I'm getting my"
+	line "PIDGEY to fly a"
+	cont "letter to SAFFRON"
+	cont "in the north!"
+	done
+
+VermilionPidgeyHousePidgeyText:
+	text "PIDGEY: Kurukkoo!"
+	done
+
+VermilionPidgeyHouseLetterText:
+	text "Dear PIPPI, I hope"
+	line "to see you soon."
+
+	para "I heard SAFFRON"
+	line "has problems with"
+	cont "TEAM ROCKET."
+
+	para "VERMILION appears"
+	line "to be safe."
 	done
 
 VermilionPidgeyHouse_MapEvents:
@@ -30,4 +57,6 @@ VermilionPidgeyHouse_MapEvents:
 	def_bg_events
 
 	def_object_events
-	object_event  1,  3, SPRITE_GENTLEMAN, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VermilionPidgeyHouseGentlemanScript, -1
+	object_event  5,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPidgeyHouseYoungsterScript, -1
+	object_event  3,  5, SPRITE_PIDGEY, SPRITEMOVEDATA_POKEMON, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPidgeyHousePidgeyScript, -1
+	object_event  4,  3, SPRITE_PAPER, 0, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionPidgeyHousePaperScript, -1

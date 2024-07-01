@@ -74,6 +74,8 @@ TrainerPicPointers::
 	dba GruntfPic
 	dba TeamRocketPic
 	dba GiovanniPic
+	dba GamblerPic
+	dba EngineerPic
 	dba KabutopsFossilPic
 	dba AerodactylFossilPic
 	dba MoonStonePic

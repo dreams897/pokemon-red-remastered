@@ -130,7 +130,7 @@ CutFunction:
 	dw .FailCut
 
 .CheckAble:
-	ld de, ENGINE_HIVEBADGE
+	ld de, ENGINE_CASCADEBADGE
 	call CheckBadge
 	jr c, .nohivebadge
 	call CheckMapForSomethingToCut
@@ -278,7 +278,7 @@ FlashFunction:
 	ret
 
 .CheckUseFlash:
-	ld de, ENGINE_ZEPHYRBADGE
+	ld de, ENGINE_BOULDERBADGE
 	farcall CheckBadge
 	jr c, .nozephyrbadge
 	push hl
@@ -343,7 +343,7 @@ SurfFunction:
 	dw .AlreadySurfing
 
 .TrySurf:
-	ld de, ENGINE_FOGBADGE
+	ld de, ENGINE_SOULBADGE
 	call CheckBadge
 	jr c, .nofogbadge
 	ld hl, wBikeFlags
@@ -498,7 +498,7 @@ TrySurfOW::
 	call CheckDirection
 	jr c, .quit
 
-	ld de, ENGINE_FOGBADGE
+	ld de, ENGINE_SOULBADGE
 	call CheckEngineFlag
 	jr c, .quit
 
@@ -553,7 +553,7 @@ FlyFunction:
 	dw .FailFly
 
 .TryFly:
-	ld de, ENGINE_STORMBADGE
+	ld de, ENGINE_THUNDERBADGE
 	call CheckBadge
 	jr c, .nostormbadge
 	call GetMapEnvironment
@@ -959,7 +959,7 @@ StrengthFunction:
 	ret
 
 .TryStrength:
-	ld de, ENGINE_PLAINBADGE
+	ld de, ENGINE_RAINBOWBADGE
 	call CheckBadge
 	jr c, .Failed
 	jr .UseStrength
@@ -1056,7 +1056,7 @@ TryStrengthOW:
 	call CheckPartyMove
 	jr c, .nope
 
-	ld de, ENGINE_PLAINBADGE
+	ld de, ENGINE_RAINBOWBADGE
 	call CheckEngineFlag
 	jr c, .nope
 
@@ -1764,7 +1764,7 @@ TryCutOW::
 	call CheckPartyMove
 	jr c, .cant_cut
 
-	ld de, ENGINE_HIVEBADGE
+	ld de, ENGINE_CASCADEBADGE
 	call CheckEngineFlag
 	jr c, .cant_cut
 

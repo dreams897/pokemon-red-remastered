@@ -1,24 +1,12 @@
 	object_const_def
-	const ROUTE5_POKEFAN_M
 
 Route5_MapScripts:
 	def_scene_scripts
 
 	def_callbacks
 
-Route5PokefanMScript:
-	jumptextfaceplayer Route5PokefanMText
-
 Route5UndergroundPathSign:
 	jumptext Route5UndergroundPathSignText
-
-Route5PokefanMText:
-	text "The road is closed"
-	line "until the problem"
-
-	para "at the POWER PLANT"
-	line "is solved."
-	done
 
 Route5UndergroundPathSignText:
 	text "UNDERGROUND PATH"
@@ -42,4 +30,3 @@ Route5_MapEvents:
 	bg_event 17, 29, BGEVENT_READ, Route5UndergroundPathSign
 
 	def_object_events
-	object_event 17, 16, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route5PokefanMScript, EVENT_ROUTE_5_6_POKEFAN_M_BLOCKS_UNDERGROUND_PATH

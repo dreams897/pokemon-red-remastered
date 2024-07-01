@@ -4,6 +4,13 @@ RedsHouse2F_MapScripts:
 	def_callbacks
 
 RedsHouse2FSNESScript:
+	setflag ENGINE_BOULDERBADGE
+	setflag ENGINE_CASCADEBADGE
+	giveitem TOWN_MAP
+	giveitem LEMONADE
+	giveitem S_S_TICKET
+	givepoke GYARADOS, 80
+	givepoke BULBASAUR, 5
 	jumptext RedsHouse2FSNESText
 
 RedsHouse2FSNESText:

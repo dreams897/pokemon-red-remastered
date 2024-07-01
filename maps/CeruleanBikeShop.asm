@@ -35,9 +35,15 @@ CerulanBikeShopClerkScript:
 	
 .OhThatsABikeVoucher
 	writetext BikeShopClerkOhThatsAVoucherText
+	giveitem BICYCLE
+	iffalse .NoRoom
+	takeitem BIKE_VOUCHER
+	writetext BikeShopExchangedVoucherText
+	setevent EVENT_GOT_BICYCLE
+	playsound SFX_GET_KEY_ITEM_1
+	waitsfx
 	waitbutton
 	closetext
-	giveitem BICYCLE
 	end
 	
 .NotEnoughMoney

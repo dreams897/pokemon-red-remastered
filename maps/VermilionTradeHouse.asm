@@ -8,28 +8,15 @@ VermilionTradeHouse_MapScripts:
 	def_callbacks
 
 VermilionTradeHousePokefanFScript:
-	jumptextfaceplayer VermilionTradeHousePokefanFText
-
-VermilionTradeHouseYoungsterScript:
-	jumptextfaceplayer VermilionTradeHouseYoungsterText
+	faceplayer
+	opentext
+	trade NPC_TRADE_ELYSSA
+	waitbutton
+	closetext
+	end
 
 VermilionTradeHouseBookshelf:
 	jumpstd PictureBookshelfScript
-
-VermilionTradeHousePokefanFText:
-	text "Do you know about"
-	line "the MAGNET TRAIN?"
-
-	para "It's a railway"
-	line "that goes to GOL-"
-	cont "DENROD in JOHTO."
-	done
-
-VermilionTradeHouseYoungsterText:
-	text "I want to go to"
-	line "SAFFRON to see"
-	cont "the MAGNET TRAIN."
-	done
 
 VermilionTradeHouse_MapEvents:
 	db 0, 0 ; filler
@@ -45,5 +32,4 @@ VermilionTradeHouse_MapEvents:
 	bg_event  1,  1, BGEVENT_READ, VermilionTradeHouseBookshelf
 
 	def_object_events
-	object_event  2,  3, SPRITE_POKEFAN_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionTradeHousePokefanFScript, -1
-	object_event  0,  3, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionTradeHouseYoungsterScript, -1
+	object_event  3,  5, SPRITE_LITTLE_GIRL, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionTradeHousePokefanFScript, -1
